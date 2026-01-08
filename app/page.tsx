@@ -49,7 +49,7 @@ const VenkateshwaraLogo = ({
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
-  const sectionsRef = useRef<{ [key: string]: HTMLElement | null }>({});
+  const sectionsRef = useRef<Record<string, HTMLElement | null>>({});
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -194,7 +194,7 @@ export default function Home() {
       <section
         id="services"
         className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white via-blue-50/30 to-white"
-        ref={(el) => { sectionsRef.current['services'] = el; }}
+        ref={(el) => { sectionsRef.current['services'] = el as HTMLElement | null; }}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-10 sm:mb-12 md:mb-16 transition-all duration-700 ${isVisible['services'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -282,7 +282,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50/30" ref={(el) => { sectionsRef.current['whyChoose'] = el; }}>
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50/30" ref={(el) => { sectionsRef.current['whyChoose'] = el as HTMLElement | null; }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-10 sm:mb-12 md:mb-16 transition-all duration-700 ${isVisible['whyChoose'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 px-2">
@@ -340,7 +340,7 @@ export default function Home() {
       <section
         id="contact"
         className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden"
-        ref={(el) => { sectionsRef.current['contact'] = el; }}
+        ref={(el) => { sectionsRef.current['contact'] = el as HTMLElement | null; }}
       >
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-64 h-64 bg-cyan-300 rounded-full mix-blend-overlay filter blur-2xl animate-float"></div>
