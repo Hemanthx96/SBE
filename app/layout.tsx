@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     icon: "/balaji-logo.png",
     apple: "/balaji-logo.png",
   },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
+  },
 };
 
 export default function RootLayout({
