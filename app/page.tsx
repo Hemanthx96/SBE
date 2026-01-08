@@ -49,7 +49,7 @@ const VenkateshwaraLogo = ({
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState<{ [key: string]: boolean }>({});
-  const sectionsRef = useRef<{ [key: string]: HTMLDivElement | null }>({});
+  const sectionsRef = useRef<{ [key: string]: HTMLElement | null }>({});
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
