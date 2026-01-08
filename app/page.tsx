@@ -194,7 +194,7 @@ export default function Home() {
       <section
         id="services"
         className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-white via-blue-50/30 to-white"
-        ref={(el) => (sectionsRef.current['services'] = el)}
+        ref={(el) => { sectionsRef.current['services'] = el; }}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-10 sm:mb-12 md:mb-16 transition-all duration-700 ${isVisible['services'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -282,7 +282,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50/30" ref={(el) => (sectionsRef.current['whyChoose'] = el)}>
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-50 via-white to-cyan-50/30" ref={(el) => { sectionsRef.current['whyChoose'] = el; }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-10 sm:mb-12 md:mb-16 transition-all duration-700 ${isVisible['whyChoose'] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 px-2">
@@ -340,7 +340,7 @@ export default function Home() {
       <section
         id="contact"
         className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white relative overflow-hidden"
-        ref={(el) => (sectionsRef.current['contact'] = el)}
+        ref={(el) => { sectionsRef.current['contact'] = el; }}
       >
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-64 h-64 bg-cyan-300 rounded-full mix-blend-overlay filter blur-2xl animate-float"></div>
@@ -436,9 +436,12 @@ export default function Home() {
               Your trusted partner for B.D.A. Sites in Bangalore
             </p>
             <div className="w-12 sm:w-16 h-0.5 bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 mx-auto mb-3 sm:mb-4 rounded-full"></div>
-            <p className="text-xs sm:text-sm text-gray-400 px-2">
+            <p className="text-xs sm:text-sm text-gray-400 px-2 mb-2">
               © {new Date().getFullYear()} Sree Balaji Enterprises. All rights
               reserved.
+            </p>
+            <p className="text-xs text-gray-500 px-2">
+              Website created by <span className="text-gray-400 font-medium">Hemanth Kumar</span>
             </p>
           </div>
         </div>

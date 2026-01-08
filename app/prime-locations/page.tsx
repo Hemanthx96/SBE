@@ -145,6 +145,17 @@ export default function PrimeLocations() {
           </div>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white py-8 sm:py-10">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-xs text-gray-500 px-2">
+              Website created by <span className="text-gray-400 font-medium">Hemanth Kumar</span>
+            </p>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
